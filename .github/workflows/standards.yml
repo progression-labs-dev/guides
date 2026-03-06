@@ -1,0 +1,39 @@
+name: Standards
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  id-token: write
+
+jobs:
+  standards:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: google-github-actions/auth@v2
+        id: gcp-auth
+        with:
+          workload_identity_provider: ${{ vars.GCP_WORKLOAD_IDENTITY_PROVIDER }}
+          service_account: ${{ vars.GCP_SERVICE_ACCOUNT }}
+          token_format: access_token
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Configure GCP Artifact Registry
+        run: |
+          echo "@progression-labs-development:registry=${{ vars.NPM_REGISTRY_URL }}" >> ~/.npmrc
+          echo "//europe-west2-npm.pkg.dev/christopher-little-dev/npm-packages/:_authToken=${{ steps.gcp-auth.outputs.access_token }}" >> ~/.npmrc
+
+      - name: Conform audit
+        run: npx @progression-labs-development/conform audit
+
+      - name: Conform check
+        run: npx @progression-labs-development/conform check

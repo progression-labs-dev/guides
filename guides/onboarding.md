@@ -1,42 +1,36 @@
 ---
 id: onboarding
-title: New Hire Onboarding
+title: "New Hire Onboarding"
 category: People
-author: Olivia Martinez
-lastUpdated: "2024-02-20"
-summary: First week checklist for new team members
+author: Chris Little
+lastUpdated: "2026-02-25"
+summary: "Checklist for getting new hires set up and productive"
 ---
 
-## New Hire Onboarding
+# New Hire Onboarding
 
-A structured first week to get new team members productive and comfortable.
+Welcome to Progression Labs. This checklist will get you set up and productive.
 
-### Day-by-Day Schedule
+## Day-One Checklist
 
-| Day | Focus | Key Activities |
-|-----|-------|----------------|
-| **Day 1** | Setup | Laptop setup, Okta SSO, Slack, Notion |
-| **Day 2** | Access | GitHub access, Linear board, 1:1 with manager |
-| **Day 3** | Context | Architecture overview, codebase walkthrough |
-| **Day 4** | Contribute | First PR — fix a small bug or update docs |
-| **Day 5** | Connect | Team lunch, 30-day goals discussion |
+- [ ] **MacBook** — Unbox, run through macOS setup, enable FileVault disk encryption
+- [ ] **Google Workspace** — Activate your `@progressionlabs.com` account (email, calendar, Google Meet)
+- [ ] **Slack** — Join the workspace and introduce yourself in `#general`
+- [ ] **GitHub** — Accept the org invite for `progression-labs`; enable 2FA
+- [ ] **Cloud access** — Request AWS, GCP, and/or Azure accounts through your manager (least-privilege by default)
 
-### First Week Checklist
+## Install pglabs-cli
 
-- [ ] Laptop configured with standard dev tools
-- [ ] Okta SSO access verified
-- [ ] Slack joined — `#general`, `#engineering`, team channel
-- [ ] GitHub org added, SSH keys configured
-- [ ] Linear board access granted
-- [ ] 1:1 scheduled with direct manager
-- [ ] Architecture overview session completed
-- [ ] First PR merged
+`pglabs-cli` is our internal command-line tool. It connects to our knowledge base and is the fastest way to get context on how the business works.
 
-### 30-Day Goals
+Install and configure it by following the instructions in the repo:
 
-By the end of month one, every new hire should:
+> <https://github.com/progression-labs/pglabs-cli>
 
-- Understand the product and who our customers are
-- Be able to independently pick up and deliver a small feature
-- Know who to ask for help on different topics
-- Have met with every member of their immediate team
+## Security Training
+
+Complete the [AI Security Training](security-training.md) before your first PR. It covers the risks specific to our work — prompt injection, cross-client data exposure, and how to safely use AI tooling.
+
+## Learn the Business
+
+Once `pglabs-cli` is installed, pair it with Claude Code to explore anything you're curious about — how we work, what we're building, who does what. Ask as many questions as you want. There are no dumb questions, and the CLI is designed to give you real answers fast.

@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "standards": {
+      "command": "npx",
+      "args": [
+        "@progression-labs-development/conform",
+        "mcp"
+      ]
+    }
+  }
+}

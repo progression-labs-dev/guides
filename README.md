@@ -1,19 +1,29 @@
-# Palindrom Guides
+# Progression Labs Guides
 
-Operational playbooks and how-to guides for Palindrom.
+Operational guides for Progression Labs.
 
-Guides live in `guides/` as Markdown files with YAML frontmatter. The [internal portal](https://github.com/palindrom-ai/internal-portal) reads from this repo at build time.
+Guides live in `guides/` as Markdown files with YAML frontmatter. The [internal portal](https://github.com/progression-labs/internal-portal) reads from this repo at build time.
+
+## Guides
+
+| Guide | Description |
+|-------|-------------|
+| [offboarding](guides/offboarding.md) | Checklist for revoking access when someone leaves the team |
+| [onboarding](guides/onboarding.md) | New hire checklist — accounts, tooling, and getting up to speed |
+| [security](guides/security.md) | Protecting our critical accounts (Google, AWS, GitHub) |
+| [security-gcp](guides/security-gcp.md) | Security best practices for Google Cloud Platform |
+| [security-training](guides/security-training.md) | AI-specific security training for all engineers |
 
 ## Frontmatter Schema
 
 ```yaml
 ---
-id: incident-response
-title: Incident Response Playbook
-category: Operations
-author: Michael Ross
-lastUpdated: "2024-03-10"
-summary: Step-by-step guide for handling production incidents
+id: onboarding
+title: "New Hire Onboarding"
+category: People
+author: Chris Little
+lastUpdated: "2026-02-25"
+summary: "Checklist for getting new hires set up and productive"
 ---
 ```
 

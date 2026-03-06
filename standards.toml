@@ -1,0 +1,16 @@
+[metadata]
+tier = "internal"
+
+[extends]
+registry = "github:progression-labs-development/standards"
+rulesets = ["base-internal"]
+
+[process.hooks]
+enabled = false          # No package.json — cannot use husky
+
+[process.branches]
+enabled = true
+
+[process.docs]
+enabled = true
+allowlist = ["README.md", "CLAUDE.md", "guides/**/*.md"]
