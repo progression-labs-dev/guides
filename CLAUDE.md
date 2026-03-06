@@ -13,4 +13,4 @@
 [How to run, test, and deploy]
 
 ## Standards
-This project follows Progression Labs coding standards. Run `npx @progression-labs-development/conform check` to verify.
+This project follows Progression Labs coding standards. Run `npx @progression-labs-dev/conform check` to verify.
