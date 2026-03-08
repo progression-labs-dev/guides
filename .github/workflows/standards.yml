@@ -33,7 +33,7 @@ jobs:
           echo "//europe-west2-npm.pkg.dev/christopher-little-dev/npm-packages/:_authToken=${{ steps.gcp-auth.outputs.access_token }}" >> ~/.npmrc
 
       - name: Conform audit
-        run: npx @progression-labs-development/conform audit
+        run: npx @progression-labs/conform audit
 
       - name: Conform check
-        run: npx @progression-labs-development/conform check
+        run: npx @progression-labs/conform check
